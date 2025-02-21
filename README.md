@@ -8,6 +8,10 @@ Deze toepassing maakt gebruik van een tekstbestand "LedenSportkamp.txt" waarin d
 
 Je mag er van uitgaan dat bij deze structuur nooit fouten zijn en dat het bestanden aanwezig zijn. Het aantal records in het tekstbestand is niet vast.
 
+Maak de classes aan volgens onderstaand schema:
+
+![](./media/ClassDiagram.png)
+
 Je maakt voor deze toepassing de (basisklasse) **Lid** met als eigenschappen:
 - **Naam** (string)
 - **Voornaam** (string)
