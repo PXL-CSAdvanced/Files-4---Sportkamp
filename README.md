@@ -12,6 +12,7 @@ Maak de classes aan volgens onderstaand schema:
 
 ![](./media/ClassDiagram.png)
 
+### Leden
 Je maakt voor deze toepassing de (basisklasse) **Lid** met als eigenschappen:
 - **Naam** (string)
 - **Voornaam** (string)
@@ -22,29 +23,27 @@ Je maakt voor deze toepassing de (basisklasse) **Lid** met als eigenschappen:
 Tevens zijn er de (uitsluitend te lezen) eigenschappen **NaamVolledig**, **SportNaam**, **KampPrijs** en **TeBetalen.**
 
 **NaamVolledig** geeft als resultaat een string met de achternaam, gevolgd door 1 blanco en de voornaam (zonder extra blanco's achteraan).
-
-**SportNaam** geeft als resultaat een string met de omschrijving van de sporttak waarvoor een lid is ingeschreven (zie tabel op vorige pagina).
-
-**KampPrijs** geeft als resultaat een double met de "normale" prijs van de sporttak waarvoor een lid is ingeschreven (zie tabel op vorige pagina).
-
+**SportNaam** geeft als resultaat een string met de omschrijving van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
+**KampPrijs** geeft als resultaat een double met de "normale" prijs van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
 **TeBetalen** geeft eveneens als resultaat een double met de prijs die het lid moet betalen. Deze prijs is de Kampprijs, waarop eventueel een korting wordt toegepast: wie minstens voor de 5^de^ keer een sportkamp volgt (zie KampVolgnr) krijgt een korting van 10%, wie minstens voor de 2^de^ keer een sportkamp volgt (maar minder dan 5), krijgt een korting van 5%.
 
 Er is ook nog de methode **InformatieVolledig()**. Deze methode geeft als resultaat een string met vooraan de inhoud van NaamVolledig (rechts aangevuld met blanco's tot een totaal van 35 posities), dan de SportNaam (aangevuld met blanco's tot een totaal van 15 posities), daarna de KampPrijs (normale prijs), dan de waarde van KampVolgnr en ten slotte de inhoud van TeBetalen.
 
 Maak een venster SportkampLeden dat een tabControl bevat met 3 tabbladen (tabPages): Details, Overzicht per week en Overzicht per sporttak. Deze bevatten respectievelijk de tekstvakken TxtDetails, TxtOverzichtWeek en TxtOverzichtSport
-
 Bij de start van het programma worden onmiddellijk alle records uit het bestand "LedenSportkamp.txt" gelezen. Per record wordt een Lid-object gecreëerd.
-
 Bij de start worden ook onmiddellijk de tekstvakken in de tabbladen gevuld, zoals weergegeven in volgende schermafdrukken:
 
 ![](./media/image1.png)
 
 ![](./media/image2.png)
 
-Het bepalen van de inhoud van het tekstvak TxtOverzichtSport (in het tabblad Overzicht per sporttak) is wat meer uitdagend.
-
 ![](./media/image3.png)
 
-Je kan eventueel ook nog de omschrijvingen en prijzen van de sporttakken inlezen uit een bestand "Sporten.txt":
-
-Deze gegevens kan je inlezen in een tabel (array) of een list. Je kan hiervoor eventueel zelfs een nieuwe klasse Sport met de eigenschappen Code (sportcode), Omschrijving (omschrijving van de sporttak), Prijs (inschrijvingsbedrag voor de sporttak), Aantal (numerieke integer waarde om bij te houden hoeveel inschrijvingen er zijn voor de betreffende sporttak) en Totaalprijs (numerieke double waarde om bij te houden hoeveel het totale inschrijvingsbedrag is voor de betreffende sporttak)
+### Sporten
+De omschrijvingen en prijzen van de sporttakken komen uit het bestand "Sporten.txt".
+Deze gegevens kan je inlezen in een tabel (array) of een list. Gebruik hiervoor de klasse Sport:
+- **Code** (sportcode)
+- **Omschrijving** (omschrijving van de sporttak)
+- **Prijs** (inschrijvingsbedrag voor de sporttak)
+- **Aantal** (numerieke integer waarde om bij te houden hoeveel inschrijvingen er zijn voor de betreffende sporttak)
+- **Totaalprijs** (numerieke double waarde om bij te houden hoeveel het totale inschrijvingsbedrag is voor de betreffende sporttak)
