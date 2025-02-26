@@ -1,0 +1,7 @@
+﻿"ATL";"Atletiek";190
+"VOE";"Voetbal";190
+"ZWE";"Zwemmen";210
+"KAY";"Kayak";250
+"TEN";"Tennis";260
+"PAA";"Paardrijden";310
+"VOL";"Volleybal";190
