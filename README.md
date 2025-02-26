@@ -20,17 +20,16 @@ Je maakt voor deze toepassing de (basisklasse) **Lid** met als eigenschappen:
 - **Weeknr** (int)
 - **KampVolgnr** (int)
 
-Tevens zijn er de (uitsluitend te lezen) eigenschappen **NaamVolledig**, **SportNaam**, **KampPrijs** en **TeBetalen.**
-
-**NaamVolledig** geeft als resultaat een string met de achternaam, gevolgd door 1 blanco en de voornaam (zonder extra blanco's achteraan).
-**SportNaam** geeft als resultaat een string met de omschrijving van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
-**KampPrijs** geeft als resultaat een double met de "normale" prijs van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
-**TeBetalen** geeft eveneens als resultaat een double met de prijs die het lid moet betalen. Deze prijs is de Kampprijs, waarop eventueel een korting wordt toegepast: wie minstens voor de 5^de^ keer een sportkamp volgt (zie KampVolgnr) krijgt een korting van 10%, wie minstens voor de 2^de^ keer een sportkamp volgt (maar minder dan 5), krijgt een korting van 5%.
+Tevens zijn er de (uitsluitend te lezen) eigenschappen:
+- **NaamVolledig** geeft als resultaat een string met de achternaam, gevolgd door 1 blanco en de voornaam (zonder extra blanco's achteraan).
+- **SportNaam** geeft als resultaat een string met de omschrijving van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
+- **KampPrijs** geeft als resultaat een double met de "normale" prijs van de sporttak waarvoor een lid is ingeschreven (zie Overzicht sporten).
+- **TeBetalen** geeft eveneens als resultaat een double met de prijs die het lid moet betalen. Deze prijs is de Kampprijs, waarop eventueel een korting wordt toegepast: wie minstens voor de 5de keer een sportkamp volgt (zie KampVolgnr) krijgt een korting van 10%, wie minstens voor de 2de keer een sportkamp volgt (maar minder dan 5), krijgt een korting van 5%.
 
 Er is ook nog de methode **InformatieVolledig()**. Deze methode geeft als resultaat een string met vooraan de inhoud van NaamVolledig (rechts aangevuld met blanco's tot een totaal van 35 posities), dan de SportNaam (aangevuld met blanco's tot een totaal van 15 posities), daarna de KampPrijs (normale prijs), dan de waarde van KampVolgnr en ten slotte de inhoud van TeBetalen.
 
-Maak een venster SportkampLeden dat een tabControl bevat met 3 tabbladen (tabPages): Details, Overzicht per week en Overzicht per sporttak. Deze bevatten respectievelijk de tekstvakken TxtDetails, TxtOverzichtWeek en TxtOverzichtSport
-Bij de start van het programma worden onmiddellijk alle records uit het bestand "LedenSportkamp.txt" gelezen. Per record wordt een Lid-object gecreëerd.
+Maak een venster **SportkampLeden** dat een tabControl bevat met 3 tabbladen: **Details**, **Overzicht per week** en **Overzicht per sporttak**. Deze bevatten respectievelijk de tekstvakken **detailsTextBox**, **weekOverviewTextBox** en **sportOverviewTextBox**.
+Bij de start van het programma worden onmiddellijk alle records uit het bestand "LedenSportkamp.txt" gelezen. Per record wordt een Lid-object gecreëerd. Hiervoor is de class **Lid** verantwoordelijk, maak hiervoor dus een methode **LeesLeden** aan.
 Bij de start worden ook onmiddellijk de tekstvakken in de tabbladen gevuld, zoals weergegeven in volgende schermafdrukken:
 
 ![](./media/image1.png)
